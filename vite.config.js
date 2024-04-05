@@ -8,7 +8,7 @@ export default defineConfig({
     port:3000,
     proxy:{
         "/api": {
-          target:"http://localhost:8000/api",
+          target: "http://IsmamK.pythonanywhere.com/api",
           changeOrigin:true,
           rewrite: (path)=>path.replace(/^\/api/,"")
         }
