@@ -14,7 +14,7 @@ const Homepage = () => {
     const fetchPendingTasks = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('/api/tasks?search=pending', {
+        const response = await fetch('https://ismamk.pythonanywhere.com/api/tasks?search=pending', {
           headers: {
             Authorization: `Token ${token}`
           }

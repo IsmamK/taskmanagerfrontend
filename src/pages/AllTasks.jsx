@@ -10,7 +10,7 @@ const AllTasks = () => {
     const fetchTasks = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('/api/tasks', {
+        const response = await fetch('https://ismamk.pythonanywhere.com/api/tasks', {
           headers: {
             Authorization: `Token ${token}`
           }
@@ -36,7 +36,7 @@ const AllTasks = () => {
   const handleMarkCompleted = async (taskId) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`/api/tasks/${taskId}`, {
+      const response = await fetch(`https://ismamk.pythonanywhere.com/api/tasks/${taskId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ const AllTasks = () => {
   const handleDeleteTask = async (taskId) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`/api/tasks/${taskId}`, {
+      const response = await fetch(`https://ismamk.pythonanywhere.com/api/tasks/${taskId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Token ${token}`

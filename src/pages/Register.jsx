@@ -31,7 +31,7 @@ const Register = () => {
     }
 
     try {
-      const response = await fetch('/api/users/', {
+      const response = await fetch('https://ismamk.pythonanywhere.com/api/users/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

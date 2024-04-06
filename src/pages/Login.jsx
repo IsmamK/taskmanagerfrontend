@@ -16,9 +16,9 @@ const handleLogin = async (e) => {
     setError('Email and password are required');
     return;
   }
-  
+
   try {
-    const response = await fetch('/api/token/login/', {
+    const response = await fetch('https://ismamk.pythonanywhere.com/api/token/login/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

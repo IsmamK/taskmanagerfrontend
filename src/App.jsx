@@ -23,7 +23,7 @@ const App = () => {
     const fetchUserData = async () => {
       try {
         if (token) {
-          const response = await fetch("/api/users/me", {
+          const response = await fetch("https://ismamk.pythonanywhere.com/api/users/me", {
             headers: {
               Authorization: `Token ${token}`,
             },
