@@ -11,7 +11,7 @@ const AddTask = () => {
     const token = localStorage.getItem('token');
 
     try {
-      const response = await fetch('/api/tasks/?page=1', {
+      const response = await fetch('https://ismamk.pythonanywhere.com/api/tasks/?page=1', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

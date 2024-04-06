@@ -8,7 +8,7 @@ const Navbar = ({token,setToken}) => {
   const handleLogout = async () => {
     // Clear the token from localStorage or perform any other necessary logout actions
     try{
-      const response = await fetch("api/token/logout",{
+      const response = await fetch("https://ismamk.pythonanywhere.com/api/token/logout",{
         method:"POST",
         headers:{
           Authorization:  `Token ${localStorage.getItem("token")}`,
